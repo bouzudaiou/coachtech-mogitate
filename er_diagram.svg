@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <style>
+    .table-header { fill: #4a90d9; }
+    .table-body { fill: #ffffff; stroke: #333; stroke-width: 2; }
+    .text-header { fill: white; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+    .text-body { fill: #333; font-family: Arial, sans-serif; font-size: 12px; }
+    .line { stroke: #333; stroke-width: 2; fill: none; }
+  </style>
+  
+  <!-- products テーブル -->
+  <rect x="50" y="50" width="180" height="30" class="table-header"/>
+  <text x="140" y="70" text-anchor="middle" class="text-header">products</text>
+  <rect x="50" y="80" width="180" height="170" class="table-body"/>
+  <text x="60" y="100" class="text-body">id (PK)</text>
+  <text x="60" y="120" class="text-body">name</text>
+  <text x="60" y="140" class="text-body">price</text>
+  <text x="60" y="160" class="text-body">image</text>
+  <text x="60" y="180" class="text-body">description</text>
+  <text x="60" y="200" class="text-body">created_at</text>
+  <text x="60" y="220" class="text-body">updated_at</text>
+  
+  <!-- product_season 中間テーブル -->
+  <rect x="310" y="50" width="180" height="30" class="table-header"/>
+  <text x="400" y="70" text-anchor="middle" class="text-header">product_season</text>
+  <rect x="310" y="80" width="180" height="130" class="table-body"/>
+  <text x="320" y="100" class="text-body">id (PK)</text>
+  <text x="320" y="120" class="text-body">product_id (FK)</text>
+  <text x="320" y="140" class="text-body">season_id (FK)</text>
+  <text x="320" y="160" class="text-body">created_at</text>
+  <text x="320" y="180" class="text-body">updated_at</text>
+  
+  <!-- seasons テーブル -->
+  <rect x="570" y="50" width="180" height="30" class="table-header"/>
+  <text x="660" y="70" text-anchor="middle" class="text-header">seasons</text>
+  <rect x="570" y="80" width="180" height="110" class="table-body"/>
+  <text x="580" y="100" class="text-body">id (PK)</text>
+  <text x="580" y="120" class="text-body">name</text>
+  <text x="580" y="140" class="text-body">created_at</text>
+  <text x="580" y="160" class="text-body">updated_at</text>
+  
+  <!-- リレーションの線 -->
+  <!-- products → product_season -->
+  <line x1="230" y1="120" x2="310" y2="120" class="line"/>
+  <text x="245" y="115" class="text-body">1</text>
+  <text x="295" y="115" class="text-body">N</text>
+  
+  <!-- product_season → seasons -->
+  <line x1="490" y1="140" x2="570" y2="100" class="line"/>
+  <text x="500" y="135" class="text-body">N</text>
+  <text x="555" y="100" class="text-body">1</text>
+</svg>
